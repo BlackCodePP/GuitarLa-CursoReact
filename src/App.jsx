@@ -53,13 +53,18 @@ export default function App() {
     setCart(updatedCart);
   }
 
+  function clearCart() {
+    setCart([]);
+  }
+
   return (
     <>
       <Header
         cart={cart}
         removeFromCart={removeFromCart}
-        increaseQuantity={increaseQuantity}
         decreaseQuantity={decreaseQuantity}
+        increaseQuantity={increaseQuantity}
+        clearCart={clearCart}
       />
 
       <main className="container-xl mt-5">
